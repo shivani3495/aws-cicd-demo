@@ -1,0 +1,7 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Deploying website to S3"
+      - aws s3 sync app/ s3://$S3_BUCKET --delete
